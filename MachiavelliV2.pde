@@ -177,7 +177,7 @@ void pointCircle()
         x = length * cos (angle);
         y = length * sin (angle);
         
-        point(x + width / 2, y + height / 2);
+        point((x + width / 2) + player.left.get(1)*-3, (y + height / 2) + player.right.get(1)*-3);
         angle += angle_stepsize;
 
     }
@@ -198,7 +198,7 @@ void pointCircle2()
         x = length * cos (angle);
         y = length * sin (angle);
         
-        point((x + width / 2) + player.left.get(1)*10, (y + height / 2) + player.left.get(1)*10);
+        point((x + width / 2) + player.left.get(1)*10, (y + height / 2) + player.right.get(1)*10);
         angle += angle_stepsize;
  
     }
@@ -225,18 +225,18 @@ void pointCircle3()
 
 float x1(float l){
   
-  return sin(l/10)*100;
+  return sin(l/10)*100 + player.left.get(1)*10;
 }
 
 float y1(float l){
-  return cos(l/2)*100 + sin(l/2)*3;
+  return cos(l/2)*100 + sin(l/2)*3 + player.left.get(1)*10;
 }
 
 float x2(float l){
   
-  return sin(l/3)*100;
+  return sin(l/3)*100 + player.right.get(1)*10;
 }
 
 float y2(float l){
-  return sin(l/5)*75 + sin(l/2)*50;
+  return sin(l/5)*75 + sin(l/2)*50 + player.right.get(1)*10;
 }
