@@ -21,7 +21,7 @@ public class MachiavelliV2 extends PApplet {
 
 
 
-int h = 1000, w = 1000;
+int h = 4000, w = 4000;
 int boxDiameter =40;
 int row = w/boxDiameter, col = h/boxDiameter;
 float animate = 0;
@@ -196,7 +196,7 @@ public void pointCircle()
         x = length * cos (angle);
         y = length * sin (angle);
         
-        point(x + width / 2, y + height / 2);
+        point((x + width / 2) + player.left.get(1)*-3, (y + height / 2) + player.right.get(1)*-3);
         angle += angle_stepsize;
 
     }
@@ -217,7 +217,7 @@ public void pointCircle2()
         x = length * cos (angle);
         y = length * sin (angle);
         
-        point((x + width / 2) + player.left.get(1)*10, (y + height / 2) + player.left.get(1)*10);
+        point((x + width / 2) + player.left.get(1)*10, (y + height / 2) + player.right.get(1)*10);
         angle += angle_stepsize;
  
     }
@@ -244,20 +244,20 @@ public void pointCircle3()
 
 public float x1(float l){
   
-  return sin(l/10)*100;
+  return sin(l/10)*100 + player.left.get(1)*10;
 }
 
 public float y1(float l){
-  return cos(l/2)*100 + sin(l/2)*3;
+  return cos(l/2)*100 + sin(l/2)*3 + player.left.get(1)*10;
 }
 
 public float x2(float l){
   
-  return sin(l/3)*100;
+  return sin(l/3)*100 + player.right.get(1)*10;
 }
 
 public float y2(float l){
-  return sin(l/5)*75 + sin(l/2)*50;
+  return sin(l/5)*75 + sin(l/2)*50 + player.right.get(1)*10;
 }
   public void settings() {  size(800,800,P3D); }
   static public void main(String[] passedArgs) {
