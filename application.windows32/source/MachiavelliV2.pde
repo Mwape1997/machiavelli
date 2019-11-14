@@ -2,7 +2,7 @@ import ddf.minim.*;
 import ddf.minim.analysis.*;
 
 
-int h = 4000, w = 4000;
+int h = 1000, w = 1000;
 int boxDiameter =40;
 int row = w/boxDiameter, col = h/boxDiameter;
 float animate = 0;
@@ -146,7 +146,8 @@ pointCircle2();
     {
           stroke(219,112,147);
       translate(2,0);
-      line(i, player.left.get(i)*8, i, player.right.get(i) * 8 + fftLin.getBand(i)*spectrumScale);
+      line( i, height, i, height - fftLin.getBand(i)*10 );
+      //line(i, player.left.get(i)*8, i, player.right.get(i) * 8 + fftLin.getBand(i)*spectrumScale);
     }
         
     fill(255, 128);
