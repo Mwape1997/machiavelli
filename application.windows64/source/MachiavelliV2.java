@@ -46,6 +46,7 @@ float spectrumScale = 4;
 
 public void setup(){
   
+  frameRate(200);
   z = new float[row][col];
   float yoffSet = 0;
   
@@ -116,7 +117,7 @@ public void draw(){
   }
   
   
-    frameRate(30);
+
  /*  if(key == 'a'){
    player.play();
  }*/

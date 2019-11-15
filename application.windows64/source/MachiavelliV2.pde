@@ -27,6 +27,7 @@ float spectrumScale = 4;
 
 void setup(){
   size(800,800,P3D);
+  frameRate(200);
   z = new float[row][col];
   float yoffSet = 0;
   
@@ -97,7 +98,7 @@ void draw(){
   }
   
   
-    frameRate(30);
+
  /*  if(key == 'a'){
    player.play();
  }*/
